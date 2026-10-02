@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Génie Logiciel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+
+    <!-- BARRE DE NAVIGATION --> 
+    <nav class="fixed w-full top-0 bg-slate-900/90 backdrop-blur border-b border-slate-800 py-4 px-8 flex justify-between items-center z-10">
+        <h1 class="text-xl font-bold text-indigo-400">&lt;IBSO /&gt;</h1>
+        <div class="space-x-6">
+            <a href="#about" class="hover:text-indigo-400 transition">À propos</a>
+            <a href="#projects" class="hover:text-indigo-400 transition">Projets</a>
+            <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+        </div>
+    </nav> 
+
+    <!-- SECTION D'ACCUEIL --> 
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+            Développeur <span class="text-indigo-400">Génie Logiciel</span>
+        </h2>
+        <p class="text-slate-400 text-lg max-w-2xl mb-8">
+            Étudiant en informatique. Je conçois des solutions logicielles en explorant le développement full-stack, la cybersécurité et l'IA.
+        </p>
+        <div class="space-x-4">
+            <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-lg transition">
+                Voir mes projets
+            </a>
+        </div>
+    </section>
+
+    <!-- GRILLE DES COMPÉTENCES --> 
+    <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold mb-8 border-b border-slate-800 pb-4">Domaines d'expertise</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Carte 1 : Génie Logiciel -->
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500 transition">
+                <h4 class="text-xl font-semibold text-indigo-400 mb-2">Génie Logiciel</h4>
+                <p class="text-slate-400 text-sm">Architecture applicative, développement Web & Mobile, bases de données.</p>
+            </div>
+
+            <!-- Carte 2 : Cybersécurité -->
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-emerald-500 transition">
+                <h4 class="text-xl font-semibold text-emerald-400 mb-2">Cybersécurité</h4>
+                <p class="text-slate-400 text-sm">Authentification sécurisée, bonnes pratiques OWASP, analyse réseau.</p>
+            </div>
+
+            <!-- Carte 3 : IA & Automatisation -->
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500 transition">
+                <h4 class="text-xl font-semibold text-purple-400 mb-2">IA & Data</h4>
+                <p class="text-slate-400 text-sm">Traitement de données en Python, intégration d'APIs IA et automatisation.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projects" class="py-20 px-6 max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold mb-8 border-b border-slate-800 pb-4">Projets Réalisés</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Emplacement Projet #1 -->
+            <div class="bg-slate-800/30 border border-dashed border-slate-700 rounded-xl p-8 text-center flex flex-col justify-center items-center">
+                <span class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-2">Projet #1 - En cours</span>
+                <h4 class="text-xl font-bold mb-2">Application Full-Stack</h4>
+                <p class="text-slate-400 text-sm mb-4">Projet complet en cours de conception pour valider mes compétences en Génie Logiciel.</p>
+                <span class="inline-block bg-slate-800 text-slate-400 text-xs px-3 py-1 rounded-full">Prochainement</span>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- SECTION CONTACT -->
+    <section id="contact" class="py-20 px-6 max-w-5xl mx-auto text-center border-t border-slate-800">
+        <h3 class="text-3xl font-bold mb-4">Me Contacter</h3>
+        <p class="text-slate-400 mb-8">N'hésitez pas à me contacter pour échanger sur un projet ou une opportunité.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <!-- Bouton Email -->
+            <a href="mailto:sethothiniel7@gmail.com" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-8 rounded-lg transition flex items-center justify-center gap-2">
+                <span>✉️</span> Envoyer un e-mail
+            </a>
+
+            <!-- Bouton WhatsApp / Téléphone -->
+            <a href="https://wa.me/2250701105345" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-8 rounded-lg transition flex items-center justify-center gap-2">
+                <span>💬</span> WhatsApp : +225 07 O1 10 53 45
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
