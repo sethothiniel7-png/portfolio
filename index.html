@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seth IBSO | Portfolio Génie Logiciel & Systems</title>
+    <title>Seth IBSO | Software Engineer & Systems</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Cursor animation pour l'effet typing */
         .typing-cursor::after {
             content: '|';
             animation: blink 1s infinite;
@@ -18,130 +17,159 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
 
-    <!-- ARRIÈRE-PLAN DYNAMIQUE (LUMIÈRE FLOTTANTE) -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-indigo-600/15 via-purple-600/10 to-transparent blur-[120px] pointer-events-none rounded-full"></div>
+    <!-- FOND LUMINEUX HAUT DE PAGE (GRADIENT CLAIR MODERNE) -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-indigo-200/40 via-purple-100/30 to-transparent blur-[120px] pointer-events-none rounded-full"></div>
 
     <!-- BARRE DE NAVIGATION --> 
-    <nav class="fixed w-full top-0 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 py-4 px-6 md:px-12 flex justify-between items-center z-50">
-        <a href="#" class="text-xl font-black tracking-wider text-indigo-400 hover:text-indigo-300 transition">&lt;IBSO /&gt;</a>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-            <a href="#about" class="hover:text-indigo-400 transition">À propos</a>
-            <a href="#skills" class="hover:text-indigo-400 transition">Compétences</a>
-            <a href="#certifications" class="hover:text-indigo-400 transition">Certifications</a>
-            <a href="#projects" class="hover:text-indigo-400 transition">Projets</a>
-            <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+    <nav class="fixed w-full top-0 bg-white/80 backdrop-blur-md border-b border-slate-200/80 py-4 px-6 md:px-12 flex justify-between items-center z-40 shadow-xs">
+        <a href="#" class="text-xl font-black tracking-wider text-indigo-600 hover:text-indigo-700 transition">&lt;IBSO /&gt;</a>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="#about" class="hover:text-indigo-600 transition">À propos</a>
+            <a href="#skills" class="hover:text-indigo-600 transition">Compétences</a>
+            <a href="#projects" class="hover:text-indigo-600 transition">Projets</a>
+            <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
         </div>
-        <a href="#contact" class="bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 text-xs font-semibold py-2 px-4 rounded-lg transition">
+        <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold py-2.5 px-5 rounded-xl transition shadow-md shadow-indigo-200">
             Me Contacter
         </a>
     </nav> 
 
-    <!-- SECTION HERO (ACCUEIL + TYPING JS + AVATAR) --> 
-    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 pb-12">
+    <!-- WIDGET RÉSEAUX SOCIAUX FIXE EN BAS À DROITE -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 bg-white/90 backdrop-blur-md p-2.5 rounded-2xl border border-slate-200/90 shadow-xl">
+        <a href="https://github.com/sethothiniel7-png" target="_blank" title="GitHub" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-indigo-50 text-slate-700 hover:text-indigo-600 border border-slate-200/60 flex items-center justify-center text-sm transition shadow-2xs font-bold">
+            💻
+        </a>
+        <a href="https://www.linkedin.com/in/seth-othiniel-682735432" target="_blank" title="LinkedIn" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 border border-slate-200/60 flex items-center justify-center text-sm transition shadow-2xs">
+            🔗
+        </a>
+        <a href="https://wa.me/2250701105345" target="_blank" title="WhatsApp Direct" class="w-10 h-10 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200/80 flex items-center justify-center text-sm transition shadow-2xs">
+            💬
+        </a>
+        <a href="mailto:sethothiniel7@gmail.com" title="Envoyer un E-mail" class="w-10 h-10 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/80 flex items-center justify-center text-sm transition shadow-2xs">
+            ✉️
+        </a>
+    </div>
+
+    <!-- SECTION HERO (ACCUEIL + AVATAR + TYPING) --> 
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-28 pb-12">
         
-        <!-- Avatar Pro avec Effet Halo et Pulsation -->
-        <div class="relative mb-6 group cursor-pointer">
-            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
-            <div class="relative w-28 h-28 md:w-36 md:h-36 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-3xl md:text-4xl font-extrabold text-indigo-400 tracking-wider shadow-2xl">
-                &lt;I/O&gt;
-            </div>
+        <!-- Badge Statut -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium mb-6 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Étudiant Licence 2 Informatique & Développeur Full-Stack
         </div>
 
-        <!-- Titre avec Animation Typing JS -->
-        <h1 class="text-3xl md:text-6xl font-black mb-4 tracking-tight">
-            Développeur <br class="md:hidden"/>
-            <span id="typing-text" class="bg-gradient-to-r from-indigo-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent typing-cursor"></span>
+       <!-- Avatar Photo Pro avec Halo Lumineux -->
+<div class="relative mb-6 group cursor-pointer">
+    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 rounded-full blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
+    <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-white border-4 border-white overflow-hidden shadow-xl">
+        <img src="profile.jpg" alt="Seth IBSO" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+    </div>
+</div>
+
+        <!-- Titre avec Typing JS -->
+        <h1 class="text-3xl md:text-6xl font-black mb-4 tracking-tight text-slate-900">
+            Seth IBSO <br/>
+            <span id="typing-text" class="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 bg-clip-text text-transparent typing-cursor"></span>
         </h1>
 
-        <p class="text-slate-400 text-sm md:text-base max-w-2xl mb-8 leading-relaxed">
-            Passionné par l'architecture logicielle, le développement mobile/web full-stack, la cybersécurité et l'intégration de solutions intelligentes.
+        <!-- DESCRIPTION PROFESSIONNELLE -->
+        <p class="text-slate-600 text-base md:text-lg max-w-2xl mb-8 leading-relaxed font-normal">
+            Étudiant en Informatique passionné par la conception d'applications web & mobiles, la sécurité des données et l'intégration de solutions intelligentes. Je transforme des architectures logiques en produits fluides et évolutifs.
         </p>
 
-        <!-- Réseaux Sociaux Rapides -->
+        <!-- Boutons d'Action Rapides -->
         <div class="flex flex-wrap justify-center gap-3 mb-10">
-            <a href="https://github.com/sethothiniel7-png" target="_blank" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 py-2.5 px-5 rounded-xl text-xs font-semibold transition flex items-center gap-2 hover:border-indigo-500/50">
-                💻 GitHub
+            <a href="https://github.com/sethothiniel7-png" target="_blank" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 py-2.5 px-5 rounded-xl text-xs font-semibold transition flex items-center gap-2 shadow-xs hover:border-indigo-300">
+                💻 GitHub (sethothiniel7-png)
             </a>
-            <a href="https://linkedin.com" target="_blank" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 py-2.5 px-5 rounded-xl text-xs font-semibold transition flex items-center gap-2 hover:border-indigo-500/50">
-                🔗 LinkedIn
-            </a>
-            <a href="https://wa.me/2250000000000" target="_blank" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 py-2.5 px-5 rounded-xl text-xs font-semibold transition flex items-center gap-2 hover:border-emerald-500/50">
-                💬 WhatsApp Direct
+            <a href="https://www.linkedin.com/in/seth-othiniel-682735432" target="_blank" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 py-2.5 px-5 rounded-xl text-xs font-semibold transition flex items-center gap-2 shadow-xs hover:border-indigo-300">
+                🔗 LinkedIn Profil
             </a>
         </div>
 
         <div>
-            <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 px-8 rounded-xl transition shadow-lg shadow-indigo-600/30 text-sm">
-                Découvrir mes projets ➔
+            <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 px-8 rounded-xl transition shadow-lg shadow-indigo-200 text-sm">
+                Découvrir mes réalisations ➔
             </a>
         </div>
     </section>
 
-    <!-- SECTION COMPÉTENCES DYNAMIQUES AVEC ACCORDEON JS --> 
-    <section id="skills" class="py-20 px-6 max-w-4xl mx-auto">
+    <!-- SECTION A PROPOS DETAILLEE -->
+    <section class="py-10 px-6 max-w-4xl mx-auto">
+        <div class="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl p-8 shadow-xs">
+            <h2 class="text-2xl font-bold mb-3 text-slate-900 flex items-center gap-2">
+                <span>📌</span> Parcours & Vision
+            </h2>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                Actuellement en cursus de <strong>Licence 2 en Informatique</strong>, je consolide mes compétences en ingénierie logicielle, algorithmique et bases de données. Mon objectif est de concevoir des applications modernes qui allient une excellente expérience utilisateur (UX/UI), un code structuré et des normes de sécurité rigoureuses.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION COMPÉTENCES DYNAMIQUES --> 
+    <section id="skills" class="py-16 px-6 max-w-4xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold mb-3">Expertise Technique</h2>
-            <p class="text-slate-400 text-sm">Clique sur une catégorie pour afficher la pile technologique associée.</p>
+            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">Expertise Technique</h2>
+            <p class="text-slate-500 text-sm">Clique sur une catégorie pour afficher les technologies utilisées.</p>
         </div>
         
         <div class="space-y-4">
 
             <!-- Accordéon 1 : Full-Stack & Mobile -->
-            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden backdrop-blur-sm">
-                <button onclick="toggleAccordion('skill-1', 'icon-1')" class="w-full p-5 text-left font-semibold text-indigo-400 text-base md:text-lg flex justify-between items-center hover:bg-slate-900/80 transition">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+                <button onclick="toggleAccordion('skill-1', 'icon-1')" class="w-full p-5 text-left font-bold text-indigo-600 text-base md:text-lg flex justify-between items-center hover:bg-slate-50 transition">
                     <span class="flex items-center gap-3">
-                        <span class="p-2 bg-indigo-500/10 rounded-lg text-indigo-400">⚡</span> Génie Logiciel & Mobile Full-Stack
+                        <span class="p-2 bg-indigo-50 rounded-xl text-indigo-600">⚡</span> Génie Logiciel & Mobile Full-Stack
                     </span>
-                    <span id="icon-1" class="text-slate-500 transition-transform duration-300">▼</span>
+                    <span id="icon-1" class="text-slate-400 transition-transform duration-300">▼</span>
                 </button>
-                <div id="skill-1" class="hidden p-5 border-t border-slate-800/60 text-slate-300 text-sm bg-slate-950/40 space-y-4">
-                    <p class="text-slate-400">Conception et déploiement d'applications mobiles et plateformes web modernes.</p>
+                <div id="skill-1" class="hidden p-5 border-t border-slate-100 text-slate-600 text-sm bg-slate-50/50 space-y-4">
+                    <p>Développement multiplateforme mobile et web avec architecture backend robuste et intégration de bases de données.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-indigo-950/60 text-indigo-300 border border-indigo-800/40 text-xs px-3 py-1.5 rounded-lg">Flutter & Dart</span>
-                        <span class="bg-indigo-950/60 text-indigo-300 border border-indigo-800/40 text-xs px-3 py-1.5 rounded-lg">Node.js & Express</span>
-                        <span class="bg-indigo-950/60 text-indigo-300 border border-indigo-800/40 text-xs px-3 py-1.5 rounded-lg">Firebase & Firestore</span>
-                        <span class="bg-indigo-950/60 text-indigo-300 border border-indigo-800/40 text-xs px-3 py-1.5 rounded-lg">SQL & Relational DB</span>
-                        <span class="bg-indigo-950/60 text-indigo-300 border border-indigo-800/40 text-xs px-3 py-1.5 rounded-lg">Tailwind CSS & JavaScript</span>
+                        <span class="bg-white text-indigo-700 border border-indigo-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Flutter & Dart</span>
+                        <span class="bg-white text-indigo-700 border border-indigo-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Node.js & Express</span>
+                        <span class="bg-white text-indigo-700 border border-indigo-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Firebase & Firestore</span>
+                        <span class="bg-white text-indigo-700 border border-indigo-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">SQL & Relational DB</span>
+                        <span class="bg-white text-indigo-700 border border-indigo-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Tailwind CSS & JavaScript</span>
                     </div>
                 </div>
             </div>
 
             <!-- Accordéon 2 : Cybersécurité -->
-            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden backdrop-blur-sm">
-                <button onclick="toggleAccordion('skill-2', 'icon-2')" class="w-full p-5 text-left font-semibold text-emerald-400 text-base md:text-lg flex justify-between items-center hover:bg-slate-900/80 transition">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+                <button onclick="toggleAccordion('skill-2', 'icon-2')" class="w-full p-5 text-left font-bold text-emerald-600 text-base md:text-lg flex justify-between items-center hover:bg-slate-50 transition">
                     <span class="flex items-center gap-3">
-                        <span class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">🛡️</span> Cybersécurité Applicative & Réseaux
+                        <span class="p-2 bg-emerald-50 rounded-xl text-emerald-600">🛡️</span> Cybersécurité Applicative & Réseaux
                     </span>
-                    <span id="icon-2" class="text-slate-500 transition-transform duration-300">▼</span>
+                    <span id="icon-2" class="text-slate-400 transition-transform duration-300">▼</span>
                 </button>
-                <div id="skill-2" class="hidden p-5 border-t border-slate-800/60 text-slate-300 text-sm bg-slate-950/40 space-y-4">
-                    <p class="text-slate-400">Analyse de vulnérabilités, sécurisation des flux de données et bonnes pratiques Web.</p>
+                <div id="skill-2" class="hidden p-5 border-t border-slate-100 text-slate-600 text-sm bg-slate-50/50 space-y-4">
+                    <p>Sensibilisation aux vulnérabilités applicatives, protection des données de santé/utilisateur et authentification sécurisée.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-xs px-3 py-1.5 rounded-lg">OWASP Top 10</span>
-                        <span class="bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-xs px-3 py-1.5 rounded-lg">Authentification & Tokens JWT</span>
-                        <span class="bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-xs px-3 py-1.5 rounded-lg">Sécurisation d'APIs</span>
-                        <span class="bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 text-xs px-3 py-1.5 rounded-lg">Notions Réseaux & Protocols</span>
+                        <span class="bg-white text-emerald-700 border border-emerald-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Principes OWASP Top 10</span>
+                        <span class="bg-white text-emerald-700 border border-emerald-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Authentification & Tokens JWT</span>
+                        <span class="bg-white text-emerald-700 border border-emerald-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Sécurisation des API REST</span>
                     </div>
                 </div>
             </div>
 
             <!-- Accordéon 3 : IA & Workflow -->
-            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden backdrop-blur-sm">
-                <button onclick="toggleAccordion('skill-3', 'icon-3')" class="w-full p-5 text-left font-semibold text-purple-400 text-base md:text-lg flex justify-between items-center hover:bg-slate-900/80 transition">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+                <button onclick="toggleAccordion('skill-3', 'icon-3')" class="w-full p-5 text-left font-bold text-purple-600 text-base md:text-lg flex justify-between items-center hover:bg-slate-50 transition">
                     <span class="flex items-center gap-3">
-                        <span class="p-2 bg-purple-500/10 rounded-lg text-purple-400">🤖</span> IA, Automation & Outils Dev
+                        <span class="p-2 bg-purple-50 rounded-xl text-purple-600">🤖</span> IA, Automation & Outils Dev
                     </span>
-                    <span id="icon-3" class="text-slate-500 transition-transform duration-300">▼</span>
+                    <span id="icon-3" class="text-slate-400 transition-transform duration-300">▼</span>
                 </button>
-                <div id="skill-3" class="hidden p-5 border-t border-slate-800/60 text-slate-300 text-sm bg-slate-950/40 space-y-4">
-                    <p class="text-slate-400">Optimisation des workflows de développement et intégration d'APIs IA.</p>
+                <div id="skill-3" class="hidden p-5 border-t border-slate-100 text-slate-600 text-sm bg-slate-50/50 space-y-4">
+                    <p>Utilisation d'environnements de développement modernes et intégration d'outils intelligents pour accélérer le workflow.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-950/60 text-purple-300 border border-purple-800/40 text-xs px-3 py-1.5 rounded-lg">Git & GitHub Actions</span>
-                        <span class="bg-purple-950/60 text-purple-300 border border-purple-800/40 text-xs px-3 py-1.5 rounded-lg">Windsurf IDE & Copilot</span>
-                        <span class="bg-purple-950/60 text-purple-300 border border-purple-800/40 text-xs px-3 py-1.5 rounded-lg">Scripting Python</span>
-                        <span class="bg-purple-950/60 text-purple-300 border border-purple-800/40 text-xs px-3 py-1.5 rounded-lg">Déploiement Vercel</span>
+                        <span class="bg-white text-purple-700 border border-purple-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Git & GitHub CI/CD</span>
+                        <span class="bg-white text-purple-700 border border-purple-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Windsurf IDE</span>
+                        <span class="bg-white text-purple-700 border border-purple-200 text-xs px-3 py-1.5 rounded-lg font-medium shadow-2xs">Déploiement Vercel</span>
                     </div>
                 </div>
             </div>
@@ -149,80 +177,46 @@
         </div>
     </section>
 
-    <!-- SECTION CERTIFICATIONS -->
-    <section id="certifications" class="py-20 px-6 max-w-4xl mx-auto border-t border-slate-900">
+    <!-- SECTION PROJETS RÉELS -->
+    <section id="projects" class="py-16 px-6 max-w-4xl mx-auto border-t border-slate-200">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold mb-3">Certifications & Formations</h2>
-            <p class="text-slate-400 text-sm">Parcours académique et validations techniques.</p>
+            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">Projets & Réalisations</h2>
+            <p class="text-slate-500 text-sm">Applications conçues et déployées.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400">Diplôme Académique</span>
-                        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Validé</span>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-100">BTS IDA (Informatique Développeur d'Applications)</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Formation en développement d'applications, algorithmique et bases de données.</p>
-                </div>
-                <div class="mt-4 pt-4 border-t border-slate-800/60 flex justify-between items-center text-xs text-slate-500">
-                    <span>Côte d'Ivoire</span>
-                    <span class="text-indigo-400 font-semibold">Licence 2 en cours ➔</span>
-                </div>
-            </div>
-
-            <div class="bg-slate-900/20 p-6 rounded-2xl border border-dashed border-slate-800 flex flex-col justify-center items-center text-center">
-                <span class="text-slate-500 text-xs uppercase tracking-wider mb-2">Certification à venir</span>
-                <p class="text-slate-300 font-semibold text-sm mb-2">Cybersécurité / Cloud & DevOps</p>
-                <span class="bg-slate-800 text-slate-400 text-xs px-3 py-1 rounded-full">En préparation</span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION PROJETS -->
-    <section id="projects" class="py-20 px-6 max-w-4xl mx-auto border-t border-slate-900">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold mb-3">Projets Phares</h2>
-            <p class="text-slate-400 text-sm">Applications concrètes conçues et développées.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <!-- Projet #1 -->
-            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 hover:border-indigo-500/40 transition duration-300 flex flex-col justify-between group">
+            <!-- Projet #1 : Portfolio -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs hover:shadow-md transition flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-indigo-400 text-xs font-bold uppercase tracking-wider">Projet Web</span>
-                        <span class="bg-indigo-500/10 text-indigo-400 text-xs px-2.5 py-0.5 rounded-full border border-indigo-500/20">En ligne</span>
+                        <span class="text-indigo-600 text-xs font-bold uppercase tracking-wider">Plateforme Web</span>
+                        <span class="bg-indigo-50 text-indigo-700 text-xs px-2.5 py-0.5 rounded-full font-semibold border border-indigo-100">En ligne</span>
                     </div>
-                    <h3 class="text-lg font-bold mb-2 group-hover:text-indigo-300 transition">Portfolio Interactif IBSO</h3>
-                    <p class="text-slate-400 text-xs mb-4 leading-relaxed">Portfolio moderne responsive avec architecture Tailwind, accordéons JS et déploiement continu via Git/Vercel.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Portfolio Professionnel IBSO</h3>
+                    <p class="text-slate-500 text-xs mb-4 leading-relaxed">Portfolio moderne responsive (Light Mode) avec accordéons interactifs, effet typing et automatisation CI/CD sur Vercel.</p>
                 </div>
-                <div class="flex items-center gap-2 pt-4 border-t border-slate-800/60 text-xs text-slate-500 flex-wrap">
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">HTML5</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">Tailwind</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">JavaScript</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">Vercel</span>
+                <div class="flex items-center gap-2 pt-4 border-t border-slate-100 text-xs text-slate-600 flex-wrap font-medium">
+                    <span class="bg-slate-100 px-2.5 py-1 rounded-md">HTML5 / Tailwind</span>
+                    <span class="bg-slate-100 px-2.5 py-1 rounded-md">JavaScript</span>
+                    <span class="bg-slate-100 px-2.5 py-1 rounded-md">Git / Vercel</span>
                 </div>
             </div>
 
-            <!-- Emplacement Projet #2 (Coifci / Full-Stack) -->
-            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 hover:border-purple-500/40 transition duration-300 flex flex-col justify-between group">
+            <!-- Projet #2 : Coifci -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs hover:shadow-md transition flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-purple-400 text-xs font-bold uppercase tracking-wider">Mobile App</span>
-                        <span class="bg-purple-500/10 text-purple-400 text-xs px-2.5 py-0.5 rounded-full border border-purple-500/20">Projet #2 (Prochainement)</span>
+                        <span class="text-purple-600 text-xs font-bold uppercase tracking-wider">Mobile App</span>
+                        <span class="bg-purple-50 text-purple-700 text-xs px-2.5 py-0.5 rounded-full font-semibold border border-purple-100">En développement</span>
                     </div>
-                    <h3 class="text-lg font-bold mb-2 group-hover:text-purple-300 transition">Application Mobile Full-Stack</h3>
-                    <p class="text-slate-400 text-xs mb-4 leading-relaxed">Conception d'une application multi-plateforme avec gestion de base de données en temps réel et authentification.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Coifci — Réservation Salon</h3>
+                    <p class="text-slate-500 text-xs mb-4 leading-relaxed">Application mobile de réservation en ligne pour salons de coiffure et barbershops avec gestion des créneaux en temps réel.</p>
                 </div>
-                <div class="flex items-center gap-2 pt-4 border-t border-slate-800/60 text-xs text-slate-500 flex-wrap">
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">Flutter</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">Node.js / Firebase</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded text-slate-300">REST API</span>
+                <div class="flex items-center gap-2 pt-4 border-t border-slate-100 text-xs text-slate-600 flex-wrap font-medium">
+                    <span class="bg-slate-100 px-2.5 py-1 rounded-md">Flutter</span>
+                    <span class="bg-slate-100 px-2.5 py-1 rounded-md">Firebase</span>
+                    <span class="bg-slate-100 px-2.5 py-1 rounded-md">Dart</span>
                 </div>
             </div>
 
@@ -230,30 +224,29 @@
     </section>
 
     <!-- SECTION CONTACT -->
-    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center border-t border-slate-900">
-        <h2 class="text-3xl font-extrabold mb-3">Discutons de votre projet</h2>
-        <p class="text-slate-400 text-sm mb-8 max-w-lg mx-auto">
-            Disponible pour des projets applicatifs, des collaborations en génie logiciel ou des opportunités d'échange.
+    <section id="contact" class="py-16 px-6 max-w-4xl mx-auto text-center border-t border-slate-200">
+        <h2 class="text-3xl font-extrabold mb-3 text-slate-900">Contactez-moi</h2>
+        <p class="text-slate-500 text-sm mb-8 max-w-lg mx-auto">
+            Une collaboration, un projet d'application ou un échange technique ? Je suis disponible.
         </p>
         
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="mailto:votre-email@example.com" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 px-8 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/25 text-sm">
-                <span>✉️</span> Me contacter par E-mail
+            <a href="mailto:sethothiniel7@gmail.com" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 px-8 rounded-xl transition shadow-lg shadow-indigo-200 text-sm flex items-center justify-center gap-2">
+                ✉️ sethothiniel7@gmail.com
             </a>
-            <a href="https://wa.me/2250000000000" target="_blank" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-emerald-400 border border-slate-800 hover:border-emerald-500/50 font-semibold py-3.5 px-8 rounded-xl transition flex items-center justify-center gap-2 text-sm">
-                <span>💬</span> Message WhatsApp
+            <a href="https://wa.me/2250701105345" target="_blank" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-emerald-700 border border-slate-200 font-semibold py-3.5 px-8 rounded-xl transition text-sm shadow-xs flex items-center justify-center gap-2">
+                💬 WhatsApp (+225 07 01 10 53 45)
             </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 text-center text-slate-600 text-xs border-t border-slate-900">
-        <p>© 2026 Seth IBSO — Ingénierie Logicielle & Systèmes.</p>
+    <footer class="py-8 text-center text-slate-400 text-xs border-t border-slate-200">
+        <p>© 2026 Seth IBSO — Portfolio Génie Logiciel.</p>
     </footer>
 
-    <!-- SCRIPT JAVASCRIPT NATIF DYNAMIQUE -->
+    <!-- SCRIPT JAVASCRIPT -->
     <script>
-        // 1. Animation Typing (Machine à écrire)
         const words = ["Génie Logiciel.", "Full-Stack.", "Cybersécurité.", "Solutions IA."];
         let i = 0;
         let timer;
@@ -294,7 +287,6 @@
 
         typingEffect();
 
-        // 2. Gestionnaire d'Accordéon pour les Compétences
         function toggleAccordion(elementId, iconId) {
             const content = document.getElementById(elementId);
             const icon = document.getElementById(iconId);
